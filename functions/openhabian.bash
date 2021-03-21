@@ -238,7 +238,7 @@ openhabian_update() {
     git -C "${BASEDIR:-/opt/openhabian}" --no-pager log --pretty=format:'%Cred%h%Creset - %s %Cgreen(%ar) %C(bold blue)<%an>%Creset %C(dim yellow)%G?' --reverse --abbrev-commit --stat "$shorthashBefore..$shorthashAfter"
     echo -e "\\nopenHABian configuration tool successfully updated."
     if [[ -n $INTERACTIVE ]]; then
-      echo "Visit the development repository for more details: ${repositoryurl:-https://github.com/openhab/openhabian.git}"
+      echo "Visit the development repository for more details: ${repositoryurl:-https://github.com/thedannymullen/openhabian.git}"
       echo "The tool will now restart to load the updates... OK"
       exec "${BASEDIR:-/opt/openhabian}/$SCRIPTNAME"
       exit 0
